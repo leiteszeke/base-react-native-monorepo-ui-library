@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@monorepo-ui/button": "file:.yalc/@monorepo-ui/button",
     "expo": "^40.0.0",
     "expo-splash-screen": "~0.8.1",
     "react": "16.13.1",

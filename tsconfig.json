@@ -2,15 +2,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "monorepo-ui": ["./src/index"]
+      "@monorepo-ui/*": ["./packages/*/src"]
     },
+    "composite": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "lib": ["esnext"],
+    "lib": ["esnext", "dom"],
     "module": "esnext",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -23,5 +24,6 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext"
-  }
+  },
+  "exclude": ["packages/*/lib", "packages/flipper-plugin-react-navigation", "example"]
 }

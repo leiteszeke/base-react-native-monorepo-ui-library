@@ -7,6 +7,7 @@
   "types": "lib/typescript/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
+  "private": true,
   "files": [
     "src",
     "lib",
@@ -22,20 +23,26 @@
     "!**/__mocks__"
   ],
   "scripts": {
-    "test": "jest",
-    "typescript": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "prepare": "bob build",
-    "release": "release-it",
+    "typescript": "tsc --noEmit --composite false",
+    "test": "jest",
+    "prerelease": "lerna run clean",
+    "release": "lerna publish",
     "example": "yarn --cwd example",
-    "pods": "cd example && pod-install --quiet",
-    "bootstrap": "yarn example && yarn && yarn pods"
+    "build": "lerna run prepare",
+    "publish:dev": "lerna run publish:dev",
+    "clean": "rimraf packages/**/lib"
   },
   "keywords": [
     "react-native",
     "ios",
     "android"
   ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "repository": "https://github.com/leiteszeke/monorepo-ui",
   "author": "Ezequiel Leites <ezequiel@leites.dev> (https://github.com/leiteszeke)",
   "license": "MIT",
@@ -59,6 +66,7 @@
     "eslint-plugin-prettier": "^3.1.3",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "lerna": "^4.0.0",
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react": "16.13.1",

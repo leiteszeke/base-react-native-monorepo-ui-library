@@ -1,0 +1,45 @@
+{
+  "name": "@monorepo-ui/button",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Ezequiel Leites <ezequiel@leites.dev>",
+  "homepage": "https://github.com/leiteszeke/monorepo-ui/tree/main/packages/button#readme",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  },
+  "main": "lib/commonjs/index",
+  "module": "lib/module/index",
+  "types": "lib/typescript/index.d.ts",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "prepare": "bob build",
+    "publish:dev": "yalc publish",
+    "clean": "del lib"
+  },
+  "devDependencies": {
+    "react": "^17.0.1",
+    "react-native": "^0.64.3"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "react-native-builder-bob": {
+    "source": "src",
+    "output": "lib",
+    "targets": [
+      "commonjs",
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.build.json"
+        }
+      ]
+    ]
+  }
+}

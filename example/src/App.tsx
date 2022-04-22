@@ -1,18 +1,13 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Text } from 'react-native';
-import MonorepoUi from 'monorepo-ui';
+import Button from '@monorepo-ui/button';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    MonorepoUi.multiply(3, 7).then(setResult);
-  }, []);
-
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: 1</Text>
+      <Button text="This is a button" onPress={() => ({})} />
     </View>
   );
 }
