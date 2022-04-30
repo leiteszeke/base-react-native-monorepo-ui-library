@@ -17,16 +17,24 @@
     "lib"
   ],
   "scripts": {
-    "prepare": "bob build",
+    "build": "bob build",
+    "clean": "rimraf lib",
+    "eslint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "yarn eslint && yarn typescript",
     "publish:dev": "yalc publish",
-    "clean": "del lib"
+    "test": "jest --coverage",
+    "typescript": "tsc --noEmit --composite false",
+    "watch": "yarn watch"
   },
   "devDependencies": {
     "react": "^17.0.1",
-    "react-native": "^0.64.3"
+    "react-native-web": "^0.17.7"
   },
   "peerDependencies": {
     "react": "*"
+  },
+  "resolutions": {
+    "@types/react": "17.0.30"
   },
   "react-native-builder-bob": {
     "source": "src",

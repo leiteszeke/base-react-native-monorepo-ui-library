@@ -1,6 +1,6 @@
 # monorepo-ui
 
-This an example of a monorepo UI library using Bob and Lerna
+This an example of a monorepo UI library using Bob and Turbo Repo
 
 ## Installation
 
