@@ -2,11 +2,16 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@monorepo-ui/*": ["./packages/*/src"]
+      "@monorepo-ui/button": ["./packages/button/src"],
+      "@monorepo-ui/icon": ["./packages/icon/src"],
+      "@monorepo-ui/styles": ["./packages/styles/src"],
     },
     "composite": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": true,
     "importsNotUsedAsValues": "error",
     "forceConsistentCasingInFileNames": true,
@@ -23,7 +28,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "rootDir": "./packages",
   },
+  "include": ["packages/*/src"],
   "exclude": ["packages/*/lib", "packages/flipper-plugin-react-navigation", "example"]
 }

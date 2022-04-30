@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "@monorepo-ui/button": {
-      "signature": "2856cd82097988fb99e2b7a95e264c97",
-      "file": true
-    }
-  }
-}
