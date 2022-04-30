@@ -164,6 +164,7 @@
     "@types/react": "17.0.30"
   },
   "dependencies": {
+    "consistencss": "^1.7.0",
     "react-dom": "17.0.1",
     "react-native-web": "^0.17.7"
   }

@@ -1,11 +1,31 @@
-# `button`
+# `@monorepo-ui/button`
 
-> TODO: description
+Just a Button component
+
+## Installation
+
+Open a Terminal in your project's folder and run,
+
+```bash
+yarn add @monorepo-ui/button
+```
 
 ## Usage
 
-```
-const button = require('button');
+```typescriptreact
+import Button from '@monorepo-ui/button';
 
-// TODO: DEMONSTRATE API
+const App = () => {
+  const handleSave = () => {}
+
+  return (
+    <Button
+      text="Save"
+      leftIcon="save"
+      onPress={handleSave}
+    />
+  );
+}
+
+export default App;
 ```

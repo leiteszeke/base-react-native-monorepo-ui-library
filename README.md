@@ -1,27 +1,29 @@
-# monorepo-ui
+# Monorepo UI
 
-This an example of a monorepo UI library using Bob and Turbo Repo
+## This is a template of a monorepo UI Library using Bob and Turbo Repo
 
-## Installation
+---
+
+## Development
 
 ```sh
-npm install monorepo-ui
+# Clone the repository
+git clone git@github.com:leiteszeke/mononorepo-ui.git .
+
+# Move to repo folder
+cd monorepo-ui
+
+# Install dependencies
+yarn install
+
+# Make your magic in packages folder
 ```
 
-## Usage
+## Run App
 
-```js
-import MonorepoUi from "monorepo-ui";
+```sh
+# Run Expo bundler
+cd example && yarn start
 
-// ...
-
-const result = await MonorepoUi.multiply(3, 7);
+# Use Expo to open iOS, Android or Web app.
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
